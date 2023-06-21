@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST_dotNET_BDD_Srv_HiriartCoralesSamaniego", "REST_dotNET_BDD_Srv_HiriartCoralesSamaniego.csproj", "{870D9021-8375-46D8-AA00-D1097A8F1C3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{870D9021-8375-46D8-AA00-D1097A8F1C3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870D9021-8375-46D8-AA00-D1097A8F1C3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870D9021-8375-46D8-AA00-D1097A8F1C3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870D9021-8375-46D8-AA00-D1097A8F1C3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5C5748F-435B-4CE1-A521-A3FF55B911E1}
+	EndGlobalSection
+EndGlobal
