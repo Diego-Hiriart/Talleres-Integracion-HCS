@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is JAX-WS RI 2.3.5 git-revision#7ddc91f. --><xs:schema xmlns:tns="http://controllers.HCS.edu.ec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://controllers.HCS.edu.ec/">
+
+<xs:element name="movimiento" type="tns:movimiento"/>
+
+<xs:element name="readMovimientos" type="tns:readMovimientos"/>
+
+<xs:element name="readMovimientosResponse" type="tns:readMovimientosResponse"/>
+
+<xs:element name="saveDeposito" type="tns:saveDeposito"/>
+
+<xs:element name="saveDepositoResponse" type="tns:saveDepositoResponse"/>
+
+<xs:complexType name="readMovimientos">
+<xs:sequence>
+<xs:element name="account" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="readMovimientosResponse">
+<xs:sequence>
+<xs:element name="movimientos-list" type="tns:movimiento" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="movimiento">
+<xs:sequence>
+<xs:element name="accion" type="xs:string" minOccurs="0"/>
+<xs:element name="cuenta" type="xs:string" minOccurs="0"/>
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0"/>
+<xs:element name="importe" type="xs:double"/>
+<xs:element name="nromov" type="xs:int"/>
+<xs:element name="tipo" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveDeposito">
+<xs:sequence>
+<xs:element name="account" type="xs:string" minOccurs="0"/>
+<xs:element name="amount" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="saveDepositoResponse">
+<xs:sequence>
+<xs:element name="status" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
