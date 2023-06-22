@@ -4,7 +4,7 @@
  */
 package ec.edu.HCS.views;
 
-import ec.edu.HCS.WSClients.HCSServiceClient;
+import ec.edu.HCS.controllers.HCSServiceController;
 import ec.edu.HCS.controllers.FieldsValidation;
 
 /**
@@ -127,8 +127,8 @@ public class DepositView extends javax.swing.JFrame {
             String account = accountField.getText();
             double amount = Double.parseDouble(amountField.getText());
             int status;
-            HCSServiceClient service = new HCSServiceClient();
-            status = service.saveDeposito(account, amount);
+            HCSServiceController controller = new HCSServiceController();
+            status = controller.makeDeposito(account, amount);
             //Tell user if deposit was made
             if (status == 1) {
                 resultField.setText("Éxito");

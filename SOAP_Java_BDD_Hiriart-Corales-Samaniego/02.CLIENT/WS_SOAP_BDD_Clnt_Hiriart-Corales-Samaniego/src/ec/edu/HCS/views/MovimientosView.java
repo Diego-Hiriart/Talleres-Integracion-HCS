@@ -4,7 +4,7 @@
  */
 package ec.edu.HCS.views;
 
-import ec.edu.HCS.WSClients.HCSServiceClient;
+import ec.edu.HCS.controllers.HCSServiceController;
 import ec.edu.hcs.controllers.Movimiento;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
@@ -122,8 +122,8 @@ public class MovimientosView extends javax.swing.JFrame {
         try {
             //Get data
             String account = accountField.getText();
-            HCSServiceClient service = new HCSServiceClient();
-            List<Movimiento> movimientosList = service.readMovimientos(account);
+            HCSServiceController controller = new HCSServiceController();
+            List<Movimiento> movimientosList = controller.getMovements(account);
             //Fill table with data
             DefaultTableModel movsTable = (DefaultTableModel) movimientosTable.getModel();
             movsTable.setRowCount(0);
