@@ -1,5 +1,5 @@
 import express from "express";
-import { sendNewMessage, resendFailedMessages } from "src/controllers/messages_controller";
+import { sendNewMessage, resendFailedMessages } from "../controllers/messages_controller";
 
 const router = express.Router();
 
