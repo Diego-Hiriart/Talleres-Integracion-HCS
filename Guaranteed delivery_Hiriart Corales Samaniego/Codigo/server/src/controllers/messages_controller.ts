@@ -25,7 +25,7 @@ export async function sendNewMessage(req: Request, res: Response) {
     //Save created message if it was not received
     await saveMessage(newMessage);
   }
-  return res.status(200).json(messageReceived);
+  return res.sendStatus(200);
 }
 
 type Content = { body: number };
@@ -37,6 +37,8 @@ export async function resendFailedMessages(req: Request, res: Response) {
 
   await Promise.all(
     files.map(async (file) => {
+      console.log(file);
+
       const message: Content = JSON.parse(
         fs.readFileSync(`./messages/${file}`).toString()
       );

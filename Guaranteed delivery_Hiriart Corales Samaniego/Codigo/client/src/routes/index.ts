@@ -1,8 +1,8 @@
-import express from "express";
+import { Router } from "express";
 
-import { receiveMessage } from "src/controllers/messages_controller";
+import { receiveMessage } from "../controllers/messages_controller";
 
-const router = express.Router();
+const router = Router();
 
 router.post("/receiver", receiveMessage);
 

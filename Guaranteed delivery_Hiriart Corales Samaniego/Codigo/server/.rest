@@ -1,0 +1,10 @@
+POST http://localhost:3000/server/send/resend-failed
+###
+POST http://localhost:3000/server/send/send-new
+###
+POST http://localhost:4000/client/receiver
+Content-Type: application/json
+
+{
+  "body": 123
+}

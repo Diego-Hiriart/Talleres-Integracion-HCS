@@ -1,10 +1,17 @@
 import { Request, Response } from "express";
-import { writeFile } from "fs";
-import { Message } from "src/interfaces";
+import { writeFileSync } from "fs";
 
 export async function receiveMessage(req: Request, res: Response) {
   //Save file for later processing
-  let dateTime = new Date().toJSON();
-  writeFile(`./messages/${dateTime}.json`, req.body, null);
-  return res.status(200);
+  try {
+    let dateTime = new Date().toJSON();
+
+    writeFileSync(
+      `./messages/${dateTime.replaceAll(":", "-")}.json`,
+      JSON.stringify(req.body)
+    );
+    return res.status(200);
+  } catch (error) {
+    console.log(error);
+  }
 }
