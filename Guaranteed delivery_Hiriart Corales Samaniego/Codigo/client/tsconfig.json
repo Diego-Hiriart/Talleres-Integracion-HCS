@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
+    "target": "ESNext",
     "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
+    "rootDir": "./",
+    "resolveJsonModule": true,
     "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
   }
 }
